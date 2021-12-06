@@ -8,9 +8,9 @@ def preprocess_text(sentence):
     sentence = sentence.lower()
     
     # Remove all non-alphabets (punctuation, numbers, new-line characters and extra-spaces)
-    sentence = re.sub(r'[^a-z]+', '', sentence)
+    sentence = re.sub(r'[^a-zA-Z]+', ' ', sentence)
     sentence = sentence.replace('\n', '')
-    sentence = re.sub(' +', ' ', sentence)
+    # sentence = re.sub('\s\s+', ' ', sentence)
     
     # Tokenize & remove stop-words
     word_list = nltk.word_tokenize(sentence)    
@@ -26,4 +26,6 @@ def preprocess_text(sentence):
     word_list = [porter_stemmer.stem(word) for word in word_list]
     word_list = [lemmatizer.lemmatize(word) for word in word_list]
     
-    return word_list
+    sentence = ' '.join(word_list)
+    
+    return sentence
