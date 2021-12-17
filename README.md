@@ -5,3 +5,9 @@
 
 ## Analysis Pipeline
 ![](flowchart.png)
+
+## Optimal number of epochs for document embeddings
+![](optimal_epochs.png)
+
+## Performance evaluation
+![](performance_evaluation.png)
