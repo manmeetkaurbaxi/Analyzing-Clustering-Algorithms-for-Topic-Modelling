@@ -7,7 +7,7 @@
 ![](flowchart.png)
 
 ## Optimal number of epochs for document embeddings
-![](optimal epochs.png)
+![](optimal_epochs.png)
 
 ## Performance evaluation
-![](performance evaluation.png)
+![](performance_evaluation.png)
