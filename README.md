@@ -5,6 +5,13 @@ The results show that corpus based embedding: Bag of Words (BoW) outperforms the
 
 ## Dataset 
 [AG News](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html)
+The AG’s corpus of news articles was obtained from the web. It contains 496,835 categorized news articles from more than 2000 news sources. The four largest classes (i.e., ‘Business’, ‘Sci/Tech’, ‘Sports’, ‘World’) were chosen from this corpus to construct the dataset, using only title and description fields. The number of training samples for each class is 30,000 and testing 1900, totalling 120,000 training and 7600 testing samples. The average length of the news description is 193 characters.
+
+## Packages used
+- python 3.7.12
+- re 2.2.1
+- nltk 3.2.5
+- gensim 4.1.2
 
 ## Analysis Pipeline
 ![](flowchart.png)
@@ -13,4 +20,13 @@ The results show that corpus based embedding: Bag of Words (BoW) outperforms the
 ![](optimal_epochs.png)
 
 ## Performance evaluation
+Bag of Words (BoW) and LDA outperformed the traditional TF-IDF-based approaches. Also, Sentence BERT performs reasonably well with the k-means clustering algorithm and can be used instead of the top-performing Bag of Words (BoW) and LDA combination, because it takes the least amount of time among the top-3.
 ![](performance_evaluation.png)
+
+## Future Work
+- Inculcating more dimensionality reduction techniques,
+- Using distributed doc2vec embedding for more flexibility with clustering algorithms, and supervised document embeddings, like, Universal Sentence Encoder (USE),
+- Using word and document embeddings as pre-trained initial layers.
+
+## References
+- [Curiskis, Stephan A et al. (2020). “An evaluation of document clustering and topic modelling in two online social networks: Twitter and Reddit”. In: Information Processing & Management 57.2, p. 102034.](https://www.sciencedirect.com/science/article/pii/S0306457318307805) 
