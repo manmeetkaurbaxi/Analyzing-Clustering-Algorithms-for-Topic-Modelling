@@ -5,9 +5,9 @@ The results show that corpus based embedding: Bag of Words (BoW) outperforms the
 
 ## Dataset 
 **AG News:** The AG’s corpus of news articles was obtained from the web. It contains 496,835 categorized news articles from more than 2000 news sources. The four largest classes (i.e., ‘Business’, ‘Sci/Tech’, ‘Sports’, ‘World’) were chosen from this corpus to construct the dataset, using only title and description fields. The number of training samples for each class is 30,000 and testing 1900, totalling 120,000 training and 7600 testing samples. The average length of the news description is 193 characters.
-[Link](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html)
+[Dataset link](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html)
 
-## Packages used
+## Dependencies
 - python 3.7.12
 - re 2.2.1
 - nltk 3.2.5
