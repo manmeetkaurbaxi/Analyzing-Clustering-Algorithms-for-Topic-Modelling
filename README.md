@@ -17,9 +17,13 @@ The results show that corpus based embedding: Bag of Words (BoW) outperforms the
 ![](flowchart.png)
 
 ## Optimal number of epochs for document embeddings
+Number of epochs is the key hyper-parameter for training a neural network. Large number of epochs can lead to over-fitting the data, however, a lower number of epochs can lead
+to under-fitting and bad performance. First, the performance change of the mean TF-IDF, doc2vec, Bag of Words (BoW) and Sentence BERT models were explored with the number of epochs. I used k-means clustering as it gave the best results for the embedding representations. For each epoch value between 25 and 300, with increments of 15, I trained the models 20 times using different random seeds and evaluated against the ground truth labels of the dataset. Table summarizes the optimal number of epochs for each of the embeddings.
 ![](optimal_epochs.png)
 
 ## Performance evaluation
+The mean evaluation measures for the four feature representations with the clustering methods are discussed. Table 2 provides the mean for each of the three evaluation measures and the CPU time taken to train and test the models. I have set the optimal number of epochs as per the findings in the previous section, i.e. 205 epochs for TF-IDF, 40 epochs for doc2vec, 235 epochs for Bag of Words (BoW), and 265 epochs for Sentence BERT.
+
 Bag of Words (BoW) and LDA outperformed the traditional TF-IDF-based approaches. Also, Sentence BERT performs reasonably well with the k-means clustering algorithm and can be used instead of the top-performing Bag of Words (BoW) and LDA combination, because it takes the least amount of time among the top-3.
 ![](performance_evaluation.png)
 
