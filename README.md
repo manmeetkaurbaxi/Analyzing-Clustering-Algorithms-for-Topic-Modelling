@@ -24,9 +24,8 @@ to under-fitting and bad performance. First, the performance change of the mean 
 ## Performance evaluation
 The mean evaluation measures for the four feature representations with the clustering methods are discussed. Table 2 provides the mean for each of the three evaluation measures and the CPU time taken to train and test the models. I have set the optimal number of epochs as per the findings in the previous section, i.e. 205 epochs for TF-IDF, 40 epochs for doc2vec, 235 epochs for Bag of Words (BoW), and 265 epochs for Sentence BERT.
 
-![](performance_evaluation.png)
-
 Bag of Words (BoW) and LDA outperformed the traditional TF-IDF-based approaches. Also, Sentence BERT performs reasonably well with the k-means clustering algorithm and can be used instead of the top-performing Bag of Words (BoW) and LDA combination, because it takes the least amount of time among the top-3.
+![](performance_evaluation.png)
 
 ## Future Work
 - Inculcating more dimensionality reduction techniques,
